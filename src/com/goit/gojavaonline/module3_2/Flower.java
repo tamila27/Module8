@@ -18,8 +18,12 @@ public abstract class Flower implements Printable {
     }
 
     public String print(){
-        String result = String.format("%-10s | %-10s |", getFlowerSpecies(), getFlowerColor() );
-        return result;
+        return String.format("| %-10s | %-10s |", getFlowerSpecies(), getFlowerColor() );
+    }
+
+    public String[] printTableLine(){
+        String[] s = {getFlowerSpecies().name(), getFlowerColor().name()};
+        return s;
     }
 
     public abstract FlowerSpecies getFlowerSpecies();

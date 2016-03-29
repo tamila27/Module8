@@ -71,4 +71,10 @@ public class Bouquet {
         stringBuilder.append(PrintUtility.listToString(flowers).toString());
         return stringBuilder.toString();
     }
+
+    public String toTableString(){
+        StringBuilder stringBuilder = new StringBuilder("\nBouquet contains flowers: \n");
+        stringBuilder.append(PrintUtility.listToTable(flowers).toString());
+        return stringBuilder.toString();
+    }
 }

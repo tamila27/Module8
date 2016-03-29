@@ -10,4 +10,12 @@ public class PrintUtility {
         }
         return result;
     }
+
+    public static StringBuilder listToTable(List<? extends Printable> printableList){
+        StringBuilder result = new StringBuilder();
+        for(Printable printable : printableList){
+            result.append(String.format("| %-10s | %-10s |\n", printable.printTableLine() ));
+        }
+        return result;
+    }
 }

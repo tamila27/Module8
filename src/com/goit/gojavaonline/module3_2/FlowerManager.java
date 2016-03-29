@@ -12,10 +12,10 @@ public class FlowerManager {
             bouquet.addFlower(FlowerFactory.getRandomFlower());
         }
 
-        printFlowersInBouquet(bouquet);
+        printFlowersInBouquetTable(bouquet);
         ArrayUtility.quickSortForFlowerArray(bouquet.getFlowers(), 0, bouquet.getFlowers().size()-1);
         System.out.println("\nBouquet after QuickSort algorithm (Sort by flower species): ");
-        printFlowersInBouquet(bouquet);
+        printFlowersInBouquetTable(bouquet);
 
         /*removeRandomFlowerFromBouquet(bouquet);
         removeRandomFlowerFromBouquet(bouquet);
@@ -76,6 +76,12 @@ public class FlowerManager {
         if (bouquet != null){
             //System.out.println(bouquet.toString());
             System.out.printf(bouquet.toString());
+        }
+    }
+
+    private static void printFlowersInBouquetTable(Bouquet bouquet){
+        if(bouquet != null){
+            System.out.printf(bouquet.toTableString());
         }
     }
 
